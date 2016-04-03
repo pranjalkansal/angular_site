@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app='angular-app'>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name='description' content="{{app.description}}" />
+
+  <title ng-bind='get_title()'>Angular</title>
+
+  <!-- Vendors CSS -->
+  <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+  <!-- Custom made stylesheets -->
+  <link type="text/css" rel="stylesheet" href="app/css/style.css" />
+  <link type="text/css" rel="stylesheet" href="app/css/media_query.css" />
+
+  <!-- Vendors scripts required for angular dependency injection -->
+  <script type="text/javascript" src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+  <!-- Load angular file -->
+  <script type="text/javascript" src="node_modules/angular.min.js"></script>
+</head>
+
+<body>
+  <div ui-view></div>
+
+  <!-- Main angular app -->
+  <script type="text/javascript" src="app/script/app.js"></script>
+
+</body>
+
+</html>
