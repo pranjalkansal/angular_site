@@ -1,0 +1,22 @@
+{
+  "name": "angular-web",
+  "version": "1.0.0",
+  "description": "Making website on angular one",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pranjalkansal/angular_site.git"
+  },
+  "author": "Pranjal Kansal",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-cookies": "^1.5.3",
+    "angular-ui-select": "^0.12.100",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "jquery": "^2.2.2",
+    "ng-dialog": "^0.5.9",
+    "oclazyload": "^1.0.9"
+  }
+}
