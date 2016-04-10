@@ -3,6 +3,15 @@
  * Provides helper functions for routes definition
  =========================================================*/
 
+// Config oc_lazy_load provider to stop loaded files debugging.
+Angular.config(['$ocLazyLoadProvider', 'REQUIRED_FILES', function ($ocLazyLoadProvider, FILES) {
+ $ocLazyLoadProvider.config({
+   debug: false,
+   events: true,
+   modules: FILES.modules
+ });
+});
+
 Angular.provider('RouteHelpers', ['REQUIRED_FILES', function (appRequires) {
     "use strict";
 
@@ -46,11 +55,13 @@ Angular.provider('RouteHelpers', ['REQUIRED_FILES', function (appRequires) {
                 // analyze module items with the form [name: '', files: []]
                 // and also simple array of script files (for not angular js)
                 function getRequired(name) {
+                    // If module required check for name and return path to load module.
                     if (appRequires.modules)
                         for (var m in appRequires.modules)
                             if (appRequires.modules[m].name && appRequires.modules[m].name === name)
                                 return appRequires.modules[m];
-                    return appRequires.scripts && appRequires.scripts[name];
+                    // Return path for script or controller to be loaded
+                    return ((appRequires.scripts && appRequires.scripts[name]) || (appRequires.controllers && appRequires.controllers[name]));
                 }
 
             }]
