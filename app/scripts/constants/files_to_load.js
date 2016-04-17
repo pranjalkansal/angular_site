@@ -17,6 +17,9 @@ Angular.constant('REQUIRED_FILES', {
   scripts: {
     'icons': [
       'node_modules/font-awesome/css/font-awesome.min.css'
+    ],
+    'parsley': [
+      'node_modules/parsleyjs/dist/parsley.min.js'
     ]
   },
   // Angular modules provided by various vendors (must use same name as dependency injection!!!)

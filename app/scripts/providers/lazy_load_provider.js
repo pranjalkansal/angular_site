@@ -10,7 +10,7 @@ Angular.config(['$ocLazyLoadProvider', 'REQUIRED_FILES', function ($ocLazyLoadPr
    events: true,
    modules: FILES.modules
  });
-});
+}]);
 
 Angular.provider('RouteHelpers', ['REQUIRED_FILES', function (appRequires) {
     "use strict";

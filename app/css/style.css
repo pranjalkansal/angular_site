@@ -1,0 +1,48 @@
+.wrapper {
+  min-height: 100%;
+}
+
+/*Fix bootstrap issue*/
+.row {
+  margin: 0;
+}
+/*Bootsrap issues end*/
+
+/*Fix footer to bottom*/
+.fix-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid grey;
+  background-color: lightgrey;
+  padding: 10px;
+}
+/*Footer end*/
+
+/*login container div*/
+.login-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  border-radius: 5px;
+}
+/*login container end*/
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+/*Different background colours*/
+.background-yellow {
+  background-color: lightgoldenrodyellow;
+}
+
+.background-purple {
+  background-color: purple;
+}
+/*Background colors end*/
