@@ -16,6 +16,7 @@
   left: 0;
   right: 0;
   z-index: -5;
+  overflow: hidden;
 }
 /*Strech background end*/
 
@@ -40,12 +41,93 @@
 }
 /*login container end*/
 
+/*tabs css*/
+.login-tabs > li {
+  width: 50%;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.login-tabs > li > a {
+  text-align: center;
+  border: 1px solid lightgrey;
+  border-radius: 0px;
+  background-color: lightgrey;
+  color: black;
+}
+
+.login-tabs >  li.active > a {
+  background-color: white;
+  border-bottom: initial;
+}
+/*tabs css end*/
+
+/*form css*/
+.has-icon {
+  position: relative;
+}
+
+.fix-icon {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+.checkbox span {
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  padding: 2px;
+  border: 1px solid lightgrey;
+  text-align: center;
+  vertical-align: top;
+  display: inline-block;
+}
+
+/*input validation*/
+.form-control.ng-pristine {
+  border: none;
+  border-bottom: 1px solid #CCC;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border: none;
+  border-bottom: 1px solid red;
+  box-shadow: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.form-control.ng-touched.ng-valid {
+  border: none;
+  border-bottom: 1px solid green;
+  box-shadow: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid blue;
+  box-shadow: none;
+}
+/*input validation end*/
+
+/*form css end*/
+
 .full-width {
   width: 100%;
 }
 
 .full-height {
   height: 100%;
+}
+
+.overflow-scroll {
+  overflow: auto;
 }
 
 /*Different background colours*/

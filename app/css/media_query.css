@@ -1,0 +1,16 @@
+/*media query for increasing responsive behaviour of website*/
+
+/*login container query's*/
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+  .login-container {
+    margin: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .login-container {
+    margin: 10% 30%;
+    width: 40%
+  }
+}
+/*login container query's end*/
