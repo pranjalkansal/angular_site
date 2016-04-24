@@ -29,6 +29,10 @@ Angular.constant('REQUIRED_FILES', {
       files: ['node_modules/angular-cookies/angular-cookies.min.js']
     },
     {
+      name: 'ui.bootstrap',
+      files: ['node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js']
+    },
+    {
       name: 'ngDialog',
       files: [
         'node_modules/ng-dialog/css/ngDialog.min.css',
