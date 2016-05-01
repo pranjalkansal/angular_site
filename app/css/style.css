@@ -188,6 +188,27 @@
 }
 /*Background colors end*/
 
+/*Sidebar menu css*/
+.sidebar {
+  background-color: black;
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+.sidebar-menu {
+  padding: 55px 20px;
+  position: absolute;
+  top: 0;
+  right: -15px;
+  left: 0;
+  bottom: 0;
+  overflow: scroll;
+}
+/*sidebar css end*/
+
 /*margins*/
 .m {
   margin: 10px;

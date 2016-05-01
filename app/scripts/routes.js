@@ -30,5 +30,12 @@ Angular.config(['$stateProvider', '$urlRouterProvider', 'RouteHelpersProvider', 
     url: '/register',
     templateUrl: helper.basepath('/pages/login.html'),
     controller: 'login'
-  });
+  })
+
+  // Main app routes
+  .state('app', {
+    url: '/app',
+    templateUrl: helper.basepath('/app/app.html'),
+    resolve: helper.resolveFor('icons')
+  })
 }]);
