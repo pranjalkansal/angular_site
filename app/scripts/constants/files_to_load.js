@@ -9,17 +9,10 @@
 
 // Constant to contain scripts and modules that need to loaded later.
 Angular.constant('REQUIRED_FILES', {
-  // Controllers scripts
-  controllers: {
-    'login_controller': ['app/scripts/controllers/login_controller.js']
-  },
   // JavaScript standalone scripts
   scripts: {
     'icons': [
       'node_modules/font-awesome/css/font-awesome.min.css'
-    ],
-    'parsley': [
-      'node_modules/parsleyjs/dist/parsley.min.js'
     ]
   },
   // Angular modules provided by various vendors (must use same name as dependency injection!!!)
@@ -27,6 +20,10 @@ Angular.constant('REQUIRED_FILES', {
     {
       name: 'ngCookies',
       files: ['node_modules/angular-cookies/angular-cookies.min.js']
+    },
+    {
+      name: 'ngMessages',
+      files: ['node_modules/angular-messages/angular-messages.min.js']
     },
     {
       name: 'ngDialog',

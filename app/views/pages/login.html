@@ -4,10 +4,10 @@
   <div class="col-sm-4 col-md-offset-4 login-container">
     <div class="row p pt-xl">
       <ul class="nav nav-tabs login-tabs">
-        <li class="active">
+        <li ng-class='{"active": login.active}'>
           <a href='#/page/login'>Log In</a>
         </li>
-        <li>
+        <li ng-class='{"active": !login.active}'>
           <a href='#/page/register'>Register</a>
         </li>
       </ul>
@@ -15,24 +15,46 @@
 
     <!-- Log in form -->
     <div class="row p">
-      <form>
+      <form novalidate="true" name='login_form'>
+
+        <!-- Email input -->
         <div class="form-group has-icon">
           <input type="email" placeholder="Email" ng-model='login.email' required
-                 class="form-control" data-parsley-type='email' />
+                 class="form-control bottom-border" name='email' ng-pattern='login.validation.email_pattern' />
+          <div class="underline"></div>
           <span class="fa fa-envelope fix-icon"></span>
+          <div class="hide-pristine" ng-messages='login_form.email.$error'>
+            <div ng-message='required'>Email is required!!</div>
+            <div ng-message='pattern'>Email is invalid!!</div>
+          </div>
         </div>
+
+        <!-- Password input -->
         <div class="form-group has-icon">
-          <input type="password" placeholder="Password" ng-model='login.password' required class="form-control" />
+          <input type="password" placeholder="Password" ng-model='login.password' required
+                 class="form-control bottom-border" name="password" ng-minlength='6'
+                 ng-maxlength='20' maxlength="50" />
+          <div class="underline"></div>
           <span class="fa fa-key fix-icon"></span>
+          <div class="hide-pristine" ng-messages='login_form.password.$error'>
+            <div ng-message='required'>Password is required!!</div>
+            <div ng-message='minlength'>Password is too short!!</div>
+            <div ng-message='maxlength'>Password is too long!!</div>
+          </div>
         </div>
+
+        <!-- Remember check -->
         <div class="form-group">
           <label for='remember' class="checkbox mv-lg">
             <input type="checkbox" ng-model='login.remember' id='remember' class="hide" />
             <span class="fa" ng-class='{"fa-check": login.remember}'></span> Remember Me
           </label>
         </div>
+
+        <!-- Submit button -->
         <div class="form-group">
-          <button type='submit' class="form-control btn btn-warning">Submit</button>
+          <button type='submit' ng-disabled='login_form.$invalid'
+                  class="form-control disable-btn btn btn-warning">Submit</button>
         </div>
       </form>
     </div>

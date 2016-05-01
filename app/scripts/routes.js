@@ -19,17 +19,16 @@ Angular.config(['$stateProvider', '$urlRouterProvider', 'RouteHelpersProvider', 
   .state('page', {
     url: '/page',
     templateUrl: helper.basepath('/pages/page.html'),
-    resolve: helper.resolveFor('parsley', 'icons')
+    resolve: helper.resolveFor('icons', 'ngMessages')
   })
   .state('page.login', {
     url: '/login',
     templateUrl: helper.basepath('/pages/login.html'),
-    resolve: helper.resolveFor('login_controller')
-    // controller: 'login'
+    controller: 'login'
   })
   .state('page.register', {
     url: '/register',
     templateUrl: helper.basepath('/pages/login.html'),
-    resolve: helper.resolveFor('login_controller')
+    controller: 'login'
   });
 }]);

@@ -61,7 +61,7 @@ Angular.provider('RouteHelpers', ['REQUIRED_FILES', function (appRequires) {
                             if (appRequires.modules[m].name && appRequires.modules[m].name === name)
                                 return appRequires.modules[m];
                     // Return path for script or controller to be loaded
-                    return ((appRequires.scripts && appRequires.scripts[name]) || (appRequires.controllers && appRequires.controllers[name]));
+                    return appRequires.scripts && appRequires.scripts[name];
                 }
 
             }]

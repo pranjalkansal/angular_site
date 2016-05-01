@@ -85,35 +85,83 @@
 }
 
 /*input validation*/
-.form-control.ng-pristine {
+.bottom-border{
   border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.bottom-border.ng-pristine {
   border-bottom: 1px solid #CCC;
-  box-shadow: none;
-  border-radius: 0px;
 }
 
-.form-control.ng-touched.ng-invalid {
-  border: none;
-  border-bottom: 1px solid red;
-  box-shadow: none;
+.bottom-border:focus {
   border-radius: 0px;
+  border: none;
   box-shadow: none;
 }
 
-.form-control.ng-touched.ng-valid {
-  border: none;
-  border-bottom: 1px solid green;
-  box-shadow: none;
-  border-radius: 0px;
-  box-shadow: none;
+.bottom-border.ng-touched {
+  border-bottom: none;
 }
 
-.form-control:focus {
-  border-radius: 0px;
-  border: none;
-  border-bottom: 1px solid blue;
-  box-shadow: none;
+.bottom-border.ng-pristine + .underline{
+  transform: scaleX(0);
+  background-color: white;
 }
+
+.bottom-border.ng-touched.ng-invalid + .underline{
+  transform: scaleX(1);
+  background-color: red;
+}
+
+.bottom-border.ng-touched.ng-valid + .underline{
+  transform: scaleX(1);
+  background-color: green;
+}
+
+/*animate underline*/
+.bottom-border:focus + .underline {
+  transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  background-color: purple;
+}
+
+.underline {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  transform-origin: 50%;
+  -moz-transform-origin: 50%;
+  transform: scaleX(0);
+  -moz-transform: scaleX(0);
+}
+/*underline animation ends*/
+
+/*Disable button color*/
+.disable-btn[disabled] {
+  background-color: grey;
+  border-color: black;
+}
+
+.disable-btn[disabled]:hover {
+  background-color: grey;
+  border-color: black;
+}
+/*Disable button color end*/
+
+/*ng-messages css*/
+.bottom-border.ng-pristine ~ .hide-pristine {
+  display: none;
+}
+
+.bottom-border.ng-touched ~ .hide-pristine {
+  display: block;
+}
+/*ndg-messages css ends*/
+
 /*input validation end*/
 
 /*form css end*/
