@@ -20,6 +20,7 @@
     "font-awesome": "^4.5.0",
     "jquery": "^2.2.2",
     "ng-dialog": "^0.5.9",
-    "oclazyload": "^1.0.9"
+    "oclazyload": "^1.0.9",
+    "simple-line-icons": "^2.2.6"
   }
 }

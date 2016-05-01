@@ -14,7 +14,7 @@
     </div>
 
     <!-- Log in form -->
-    <div class="row p">
+    <div class="row p" ng-if='login.active'>
       <form novalidate="true" name='login_form'>
 
         <!-- Email input -->
@@ -59,5 +59,81 @@
       </form>
     </div>
     <!-- Login form end -->
+
+    <!-- Registration form -->
+    <div class="row p" ng-if='!login.active'>
+      <form novalidate="true" name='registration_form'>
+
+        <!-- User first name input -->
+        <div class="form-group has-icon">
+          <input type="text" placeholder="First name" ng-model='login.first_name' required
+                 class="form-control bottom-border" name='first_name' ng-pattern='login.validation.name_pattern' />
+          <div class="underline"></div>
+          <span class="fa icon-user fix-icon"></span>
+          <div class="hide-pristine" ng-messages='registration_form.first_name.$error'>
+            <div ng-message='required'>First name is required!!</div>
+            <div ng-message='pattern'>First name is invalid!!</div>
+          </div>
+        </div>
+
+        <!-- User last name input -->
+        <div class="form-group has-icon">
+          <input type="text" placeholder="Last name" ng-model='login.last_name' required
+                 class="form-control bottom-border" name='last_name' ng-pattern='login.validation.name_pattern' />
+          <div class="underline"></div>
+          <span class="fa icon-user fix-icon"></span>
+          <div class="hide-pristine" ng-messages='registration_form.last_name.$error'>
+            <div ng-message='required'>Last name is required!!</div>
+            <div ng-message='pattern'>Last name is invalid!!</div>
+          </div>
+        </div>
+
+        <!-- User name input -->
+        <div class="form-group has-icon">
+          <input type="text" placeholder="Username" ng-model='login.username' required ng-keyup='check_username(registration_form.username.$error)'
+                 class="form-control bottom-border" name='username' ng-pattern='login.validation.username_pattern' />
+          <div class="underline"></div>
+          <span class="fa fa-users fix-icon"></span>
+          <div class="hide-pristine" ng-messages='registration_form.username.$error'>
+            <div ng-message='required'>Username is required!!</div>
+            <div ng-message='pattern'>Username is invalid!!</div>
+            <div ng-message='exisiting'>Username is already exists!!</div>
+          </div>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-group has-icon">
+          <input type="email" placeholder="Email" ng-model='login.email' required
+                 class="form-control bottom-border" name='email' ng-pattern='login.validation.email_pattern' />
+          <div class="underline"></div>
+          <span class="fa fa-envelope fix-icon"></span>
+          <div class="hide-pristine" ng-messages='registration_form.email.$error'>
+            <div ng-message='required'>Email is required!!</div>
+            <div ng-message='pattern'>Email is invalid!!</div>
+          </div>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-group has-icon">
+          <input type="password" placeholder="Password" ng-model='login.password' required
+                 class="form-control bottom-border" name="password" ng-minlength='6'
+                 ng-maxlength='20' maxlength="50" />
+          <div class="underline"></div>
+          <span class="fa fa-key fix-icon"></span>
+          <div class="hide-pristine" ng-messages='registration_form.password.$error'>
+            <div ng-message='required'>Password is required!!</div>
+            <div ng-message='minlength'>Password is too short!!</div>
+            <div ng-message='maxlength'>Password is too long!!</div>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-group">
+          <button type='submit' ng-disabled='registration_form.$invalid'
+                  class="form-control disable-btn btn btn-warning">Submit</button>
+        </div>
+      </form>
+    </div>
+    <!-- Registration form end -->
   </div>
 </div>

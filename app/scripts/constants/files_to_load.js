@@ -12,7 +12,8 @@ Angular.constant('REQUIRED_FILES', {
   // JavaScript standalone scripts
   scripts: {
     'icons': [
-      'node_modules/font-awesome/css/font-awesome.min.css'
+      'node_modules/font-awesome/css/font-awesome.min.css',
+      'node_modules/simple-line-icons/css/simple-line-icons.css'
     ]
   },
   // Angular modules provided by various vendors (must use same name as dependency injection!!!)
