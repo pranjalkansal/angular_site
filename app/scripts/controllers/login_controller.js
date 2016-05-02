@@ -21,7 +21,7 @@ Angular.controller('login', ['$scope', '$state', '$http', function ($scope, $sta
   // Check for state and activate the login/register tabs and contents.
   $scope.login.active = $state.current.url == '/login'?true:false;
 
-  // Remove multiple in between spaces and trim start and end spaces
+  // Remove extra spaces from input fields.
   $scope.trim_spaces = function (field) {
     $scope.login[field] = $scope.login[field].trim();
     $scope.login[field] = $scope.login[field].replace(/\s+/g, ' ');
