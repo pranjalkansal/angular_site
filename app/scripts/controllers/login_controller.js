@@ -21,6 +21,13 @@ Angular.controller('login', ['$scope', '$state', '$http', function ($scope, $sta
   // Check for state and activate the login/register tabs and contents.
   $scope.login.active = $state.current.url == '/login'?true:false;
 
+  // Remove multiple in between spaces and trim start and end spaces
+  $scope.trim_spaces = function (field) {
+    $scope.login[field] = $scope.login[field].trim();
+    $scope.login[field] = $scope.login[field].replace(/\s+/g, ' ');
+    $scope.login[field] = $scope.login[field].replace(/(^| )(\w)/g, function(x) {return x.toUpperCase();});
+  };
+
   // Check if username already exists.
   $scope.check_username = function ($error) {
     console.log($scope.login.username);
