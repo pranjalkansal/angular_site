@@ -192,6 +192,7 @@
 .sidebar {
   background-color: black;
   width: 25%;
+  min-width: 200px;
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -199,13 +200,38 @@
 }
 
 .sidebar-menu {
-  padding: 55px 20px;
+  padding: 50px 20px;
   position: absolute;
   top: 0;
   right: -15px;
   left: 0;
   bottom: 0;
   overflow: scroll;
+}
+
+.sidebar-partition {
+  margin: 0;
+  border-color: grey;
+}
+
+.user-name {
+  padding: 15px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid green;
+  box-shadow: 1px 3px 12px green;
+  display: inline-block;
+}
+
+.status.active {
+  background-color: green;
 }
 /*sidebar css end*/
 

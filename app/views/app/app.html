@@ -10,7 +10,17 @@
 <div class="full-window">
 <!-- Sidebar with invisible scrolling -->
 <div class="sidebar">
-  <div class="sidebar-menu"></div>
+  <div class="sidebar-menu">
+    <!-- username -->
+    <div class="user-name">
+      <span class='status active'></span> {{sidebar.user_name || 'Username'}}
+    </div>
+    <hr class='sidebar-partition' />
+    <!-- user created or joined groups -->
+    <div class="sidebar-group">
+
+    </div>
+  </div>
 </div>
 <div class="background-yellow" ui-view></div>
 </div>
