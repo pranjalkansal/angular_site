@@ -38,4 +38,8 @@ Angular.config(['$stateProvider', '$urlRouterProvider', 'RouteHelpersProvider', 
     templateUrl: helper.basepath('/app/app.html'),
     resolve: helper.resolveFor('icons')
   })
+  .state('app.messages', {
+    url: '/messages',
+    templateUrl: helper.basepath('/app/message.html')
+  });
 }]);

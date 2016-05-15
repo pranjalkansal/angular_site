@@ -1,15 +1,17 @@
 <!-- Create top navbar and inherit pre-login data in the body -->
-<nav class="nav navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand"> Angular Site</a>
+<header>
+  <nav class="nav navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand"> Angular Site</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 
 <!-- Sidebar with invisible scrolling -->
 <div class="sidebar">
-  <div class="sidebar-menu">
+  <div class="sidebar-menu ph">
     <!-- username -->
     <div class="user-name">
       <span class='status active'></span> {{sidebar.user_name || 'Username'}}
@@ -23,9 +25,7 @@
 </div>
 
 <!-- Message screen -->
-<div class="message-screen">
-  <div class="background-yellow message-state" ui-view></div>
-</div>
+<div class="background-yellow message-screen" ui-view></div>
 
 <!-- footer for Registration landing pages -->
-<footer class="fix-bottom">{{app.name}}, {{app.year}}</footer>
+<!-- <footer class="fx-bottom">{{app.name}}, {{app.year}}</footer> -->
