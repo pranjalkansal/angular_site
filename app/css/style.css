@@ -8,21 +8,9 @@
 }
 /*Bootsrap issues end*/
 
-/*Strech background to complete window*/
-.full-window {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -5;
-  overflow: hidden;
-}
-/*Strech background end*/
-
 /*Fix footer to bottom*/
 .fix-bottom {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: auto;
@@ -34,8 +22,8 @@
 
 /*login container div*/
 .login-container {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 80px;
+  margin-bottom: 30px;
   background-color: white;
   border-radius: 5px;
 }
@@ -188,15 +176,27 @@
 }
 /*Background colors end*/
 
+/*Topnavbar css*/
+.wrapper > .nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 1px 5px 15px black;
+}
+/*Topnavbar css end*/
+
 /*Sidebar menu css*/
 .sidebar {
-  background-color: black;
-  width: 25%;
+  background-color: #111;
+  width: 20%;
+  float: left;
   min-width: 200px;
   height: 100%;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   color: white;
+  box-shadow: 1px 1px 10px black;
 }
 
 .sidebar-menu {
@@ -234,6 +234,12 @@
   background-color: green;
 }
 /*sidebar css end*/
+
+/*Message screen css*/
+.message-screen > .message-state {
+  padding-top: 50px;
+}
+/*Message screen css end*/
 
 /*margins*/
 .m {
