@@ -248,6 +248,26 @@ html, body {
 
 .message-state {
   padding: 20px;
+  height: 100vh;
+  position: relative;
+}
+
+.message-input {
+  position: absolute;
+  bottom: 10px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  right: 10px;
+  left: 0px;
+}
+
+.message-input-field {
+  width: 100%;
+  padding: 6px 9px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 /*Message screen css end*/
 
