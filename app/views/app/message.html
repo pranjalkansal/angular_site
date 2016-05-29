@@ -1,8 +1,15 @@
-<!-- Show send and recived messages between users -->
-<div class="message-state p-md">
+<!-- Input message filed block -->
+<div class="message-input-wrapper mb">
+    <!-- Input messages  -->
+    <div class="full-width">
+      <label class="message-label">Message:</label>
+      <input type="text" ng-model='user.message' class="message-input-field" />
+    </div>
+</div>
 
-  <!-- Input messages  -->
-  <div class="message-input">
-    <input type="text" ng-model='user.message' class="message-input-field" />
+<!-- Show send and recived messages between users -->
+<div class="background-yellow message-panel p-md mh" ng-show='user.has_messages'>
+  <div class="panel-inner">
+    htllo <br />
   </div>
 </div>
